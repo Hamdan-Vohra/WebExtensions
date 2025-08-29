@@ -1,5 +1,6 @@
 <h1 align="center">Docs Reading Time Extension</h1>
 
+<p>We use content scripts attribut in manifest to run script on specified pages</p>
 
 <h5>🔹 Download Folder</h5>
 
@@ -12,7 +13,6 @@
   <li>Click <b>Load unpacked</b> and select the project folder</li>
   <li>Extension will appear in your list 🎉</li>
 </ol>
-
 
 <h5>🔹 Usage</h5>
 <ul style="font-size:15px;">

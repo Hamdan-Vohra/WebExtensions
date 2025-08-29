@@ -5,12 +5,21 @@
   "manifest_version": 3,
   "author": "Hamdan Vohra",
   "action": {
-    "default_popup": "time.html",
-    "default_icon": "logo.png",
+    "default_icon": "time_logo.png",
     "default_title": "Reading Time Calculation"
   },
   "icons": {
-    "128": "logo.png"
+    "128": "time_logo.png"
   },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://*/docs/*",
+        "https://*/blogs/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
   "host_permissions": ["https://*/*"]
 }
