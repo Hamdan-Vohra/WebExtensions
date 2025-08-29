@@ -1,6 +1,8 @@
 <h1 align="center">Docs Reading Time Extension</h1>
 
-<p>We use content scripts attribut in manifest to run script on specified pages</p>
+<ol>
+<li>We use content scripts attribute in manifest to run script on specified pages.</li><li>To add minimum time to each article showing on docs of any website.</li><li>Also, we provide a popup timer to view the elapsed read time.</li><li>You can view your time by clicking on the extension where you can pause,stop and restart the timer.</li>
+</ol>
 
 <h5>🔹 Download Folder</h5>
 
