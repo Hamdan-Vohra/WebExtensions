@@ -1,0 +1,16 @@
+{
+  "name": "Reading Time",
+  "description": "Time Calculating Web Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "Hamdan Vohra",
+  "action": {
+    "default_popup": "time.html",
+    "default_icon": "logo.png",
+    "default_title": "Reading Time Calculation"
+  },
+  "icons": {
+    "128": "logo.png"
+  },
+  "host_permissions": ["https://*/*"]
+}
