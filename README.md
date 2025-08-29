@@ -35,11 +35,18 @@ With the right permissions, extensions can:
 
 <h2>⚡ Getting Started</h2>
 
+<h3>🔹 How this Repository Structured</h3>
+
+<ul>
+  <li>This repository has multiple branches where each branch is for one specific extension, so you may install only the extension you want to apply on you web browser.</li>
+</ul>
+
 <h3>🔹 Installation</h3>
 
 ```bash
 git clone https://github.com/Hamdan-Vohra/WebExtensions.git
 cd WebExtensions
+```
 
 <h3>🔹 Load in Chrome</h3>
 <ol style="font-size:15px;">
@@ -73,4 +80,3 @@ cd WebExtensions
   <li>Push branch → <code>git push origin feature-branch</code></li>
   <li>Open a Pull Request</li>
 </ol>
-```
