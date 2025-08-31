@@ -27,6 +27,7 @@
 <ul style="font-size:15px;">
   <li>This extension includes the implementation of content_script</li>
   <li>Content Script: Normal js file, but got power through manifest configuration, allowing the js file to mount on the current tab script, meaning that it will have an acess to DOM of the current opened tab code</li>
+  <li>Content Script will run only the specified tabs accoring to match criteria</li>
   <li>Not all js file are content_scripts unless we configured it thorugh manifest file like below</li>
   <li>
   "content_scripts": [
