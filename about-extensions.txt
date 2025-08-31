@@ -1,0 +1,14 @@
+We have mentioned about the extensions that what they are and how they are being used.
+In this file, we will deal with technical terms and what the web exstensions includes.
+
+To show popup below the extension icon, we would show thorugh popup.html, popup.css for styling and popup.js for script.
+The name of the files could be dynamic, but we have to configure these files in manifest.json in 'actions' key
+
+Then, we have an option to get access to the opened TAB DOM content, thorugh 'content_scripts' key, where we mention two things
+'files' array and 'matches' urls array
+Important thing about content scripts is that they have power to access the DOMContent, also their logs will be shown in the tab console
+while popup.js logs will be shown in the console of that popup
+
+
+Now, comes to backgorund_script that in version 3.0 of web extension it is called service_worker.
+It has access to that tab actions too, also uses web API
