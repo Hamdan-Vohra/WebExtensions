@@ -22,3 +22,22 @@
   <li>Access its features directly</li>
   <li>(Optional) Customize settings from the options page</li>
 </ul>
+
+<h5>🔹 About Learining</h5>
+<ul style="font-size:15px;">
+  <li>This extension includes the implementation of content_script</li>
+  <li>Content Script: Normal js file, but got power through manifest configuration, allowing the js file to mount on the current tab script, meaning that it will have an acess to DOM of the current opened tab code</li>
+  <li>Not all js file are content_scripts unless we configured it thorugh manifest file like below</li>
+  <li>
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      //this is the matching criteria
+      "matches": [
+        "https://*/docs/*",
+        "https://*/blogs/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]</li>
+</ul>

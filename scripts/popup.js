@@ -1,3 +1,4 @@
+// This is normal javascript file loaded on the extension popup only and deals with the DOM of the popup html only.
 let seconds = 0;
 let interval = null;
 

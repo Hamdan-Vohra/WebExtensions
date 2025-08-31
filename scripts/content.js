@@ -1,3 +1,5 @@
+// this is content_scripts' javascript file having the power of manipulating DOM of the current TAB
+
 function renderReadingTime(article) {
   // If we weren't provided an article, we don't need to render anything.
   if (!article) {
