@@ -14,11 +14,10 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   }
 });
 
-
 chrome.windows.onFocusChanged.addListener(async (windowId) => {
   if (windowId === chrome.windows.WINDOW_ID_NONE) {
-    // Pause all YouTube videos if no Chrome window is active
     const tabs = await chrome.tabs.query({ url: "*://www.youtube.com/*" });
+    console.log(tabs);
     for (const t of tabs) {
       chrome.tabs.sendMessage(t.id, { action: "pause" }).catch(() => {});
     }
@@ -26,6 +25,7 @@ chrome.windows.onFocusChanged.addListener(async (windowId) => {
   }
 
   const [tab] = await chrome.tabs.query({ active: true, windowId });
+  console.log(tab);
   if (tab?.url?.includes("youtube.com")) {
     chrome.tabs.sendMessage(tab.id, { action: "play" }).catch(() => {});
   }
