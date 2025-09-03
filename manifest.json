@@ -1,26 +1,17 @@
 {
-  "name": "Reading Time",
-  "description": "Time Calculating Web Extension",
-  "version": "1.0",
   "manifest_version": 3,
-  "author": "Hamdan Vohra",
-  "action": {
-    "default_popup": "timer.html",
-    "default_icon": "time_logo.png",
-    "default_title": "Reading Time Calculation"
-  },
-  "icons": {
-    "128": "time_logo.png"
+  "name": "YouTube Auto Pause/Play",
+  "version": "1.0",
+  "description": "Automatically pauses and plays YouTube videos when switching tabs or windows.",
+  "permissions": ["scripting", "tabs"],
+  "background": {
+    "service_worker": "tab_eventslistener.js"
   },
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://*/docs/*",
-        "https://*/blogs/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content_script.js"]
     }
   ],
-  "host_permissions": ["https://*/*"]
+  "host_permissions": ["*://www.youtube.com/*"]
 }
