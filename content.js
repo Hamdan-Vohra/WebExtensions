@@ -1,19 +1,17 @@
 function controlVideo(action) {
   const video = document.querySelector("video");
   if (!video) return;
-  
-  if (action === "play") {
-    if (video.paused) video.play();
-  } else if (action === "pause") {
-    if (!video.paused) video.pause();
+
+  if (action === "play" && video.paused) {
+    video.play();
+  } else if (action === "pause" && !video.paused) {
+    video.pause();
   }
 }
 
-// Listen for events from background.js
-document.addEventListener("yt-visibility", (e) => {
-  if (e.detail === "visible") {
-    controlVideo("play");
-  } else {
-    controlVideo("pause");
+// Listen for messages from background.js
+chrome.runtime.onMessage.addListener((message) => {
+  if (message.action) {
+    controlVideo(message.action);
   }
 });

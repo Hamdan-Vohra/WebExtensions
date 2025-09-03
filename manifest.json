@@ -3,14 +3,14 @@
   "name": "YouTube Auto Pause/Play",
   "version": "1.0",
   "description": "Automatically pauses and plays YouTube videos when switching tabs or windows.",
-  "permissions": ["scripting", "tabs"],
+  "permissions": ["scripting", "tabs", "activeTab"],
   "background": {
-    "service_worker": "tab_eventslistener.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/*"],
-      "js": ["content_script.js"]
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
     }
   ],
   "host_permissions": ["*://www.youtube.com/*"]

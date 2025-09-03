@@ -1,8 +1,19 @@
-<h1 align="center">Docs Reading Time Extension</h1>
+<h1 align="center">Youtube Auto Play/Pause</h1>
 
+<h3>Purpose and Work</h3>
 <ol>
-<li>We use content scripts attribute in manifest to run script on specified pages.</li><li>To add minimum time to each article showing on docs of any website.</li><li>Also, we provide a popup timer to view the elapsed read time.</li><li>You can view your time by clicking on the extension where you can pause,stop and restart the timer.</li>
+  <li>This extension mainly focuses on communication between background and content_script.</li>
+  <li>This extension is used for auto pause and auto play the youtube video, when the tab or window changes.</li>
+  <li>It always play the active tab video if it is Youtube video</li>
+  <li>This extension also includes background.js handling tabs and widows' events.</li>
 </ol>
+
+<h3>Important Guide</h3>
+  <ol>
+    <li>background.js → handles tab/window events.</li>
+    <li>content_script.js → talks to background, manipulates DOM, and optionally dispatches events.</li>
+    <li>page_injected.js → lives inside the YouTube page’s JS world, catches those events if you need to touch window.ytplayer or other page variables.<b>But I didn't use it in this extension</b></li>
+  </ol>
 
 <h5>🔹 Download Folder</h5>
 
