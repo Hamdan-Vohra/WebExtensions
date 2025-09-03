@@ -14,10 +14,10 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   }
 });
 
+//When a chrome window gets unfocused
 chrome.windows.onFocusChanged.addListener(async (windowId) => {
   if (windowId === chrome.windows.WINDOW_ID_NONE) {
     const tabs = await chrome.tabs.query({ url: "*://www.youtube.com/*" });
-    console.log(tabs);
     for (const t of tabs) {
       chrome.tabs.sendMessage(t.id, { action: "pause" }).catch(() => {});
     }
